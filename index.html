@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>STS Demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+  <div class="header py-5 mb-3" style="background-color: #ec991c">
+    <h1 class="text-center py-2" style="color:#ffffff">Mandarin Speech-To-Singing Synthesis System</h1>
+  </div>
+
+  <div class="content mb-5">
+   <div class="text text-center">
+    <p class="title mb-1 font-weight-bold">A Mandarin Chinese Speech-To-Singing Symthesis System</p>
+    <p class="author mb-1">Qinging Zhu, Hongyang Li, Aozhi Liu, Jing Xiao</p>
+    <p class="author mb-1">Ping An Technology (Shenzhen) Co. Ltd</p>
+   </div>
+   <div class="text">
+    <p class="description col-sm-8 offset-sm-2 mb-1">
+      A Mandarin Chinese Speech-To-Singing synthesis system is described in this paper. 
+      Given a musical score of a song and a speaking voice reading its lyrics, the system converts the speaking voice into a singing voice using three control models: the F0 model, the duration model and the spectral envelope model.
+      The F0 model generates the singing F0 contour from a musical score, while adding unique elements to the singing voice. Additional optimization of unvoiced consonant is done to adapt Mandarin Chinese.
+      The duration model adjusts the duration of a Chinese syllable based on the duration of its musical note.
+      This paper also explores proper way to assign duration of a syllable to its composing phoneme.
+      The spectrum model converts a speaking voice into a singing voice by controlling the singing formant of vowels.  
+    </p>
+   </div>
+   <hr>
+   <div class="audio row mt-5">
+      <div class="col-sm-8 offset-sm-2">
+        <h3 class="text-center">Demo</h3>
+        <p class="description mb-3">
+          This demo is about three original songs from AI Music Team, Ping An Technology. 
+          A speaking voice of the lyrics was recorded for each song. With a musical score of the song, the proposed Mandarin STS system trasformed the speaking voices into singing voices.  
+        </p>
+        <table class="table table-bordered table-hover text-center">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Song Name</th>
+              <th scope="col">Speaking Voice</th>
+              <th scope="col">Singing Voice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="align-middle" scope="row">青春记忆</th>
+              <td>
+                <audio controls>
+                  <source src="./assets/audio/青春记忆_女声_朗读.mp3" type="audio/mpeg">
+                </audio>
+              </td>
+              <td>
+                <audio controls>
+                  <source src="./assets/audio/青春记忆_女声_伴奏.mp3" type="audio/mpeg">
+                </audio>
+              </td>
+            </tr>
+            <tr>
+              <th class="align-middle" scope="row">春回江城</th>
+              <td>
+                <audio controls>
+                  <source src="./assets/audio/春回江城_女声_朗读.mp3" type="audio/mpeg">
+                </audio>
+              </td>
+              <td>
+                <audio controls>
+                  <source src="./assets/audio/春回江城_女声_伴奏.mp3" type="audio/mpeg">
+                </audio>
+              </td>
+            </tr>
+            <tr>
+              <th class="align-middle" scope="row">家乡</th>
+              <td>
+                <audio controls>
+                  <source src="./assets/audio/家乡_女声_朗读.mp3" type="audio/mpeg">
+                </audio>
+              </td>
+              <td>
+                <audio controls>
+                  <source src="./assets/audio/家乡_女声_伴奏.mp3" type="audio/mpeg">
+                </audio>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
